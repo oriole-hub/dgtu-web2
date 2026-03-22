@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Rostelecom Basis';
+  src: url('/fonts/RostelecomBasis-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rostelecom Basis';
+  src: url('/fonts/RostelecomBasis-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rostelecom Basis';
+  src: url('/fonts/RostelecomBasis-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@theme {
+  --font-sans: 'Rostelecom Basis', ui-sans-serif, system-ui, sans-serif;
+  --color-brand: #6d28d9;
+  --color-brand-foreground: #faf5ff;
+  --color-accent: #ff5500;
+  --color-surface: #f0eeff;
+  --color-muted-foreground: #64748b;
+}
+
+@keyframes pulse-orange {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply m-0 min-h-svh bg-white text-slate-900;
+  }
+
+  #root {
+    @apply min-h-svh;
+  }
+}
